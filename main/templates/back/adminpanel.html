@@ -1,0 +1,235 @@
+{% extends "back/adminmaster.html" %}
+
+{% block head %} 
+
+<!-- Primary Meta Tags -->
+<title>Audio Converts:- Try to Better For You</title>
+<meta name="title" content="Audio Converts:- Try to Better For You">
+<meta name="description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="audioconverts.co">
+<meta property="og:title" content="Audio Converts:- Try to Better For You">
+<meta property="og:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="og:image" content="https://i.imgur.com/AzYduwv.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="audioconverts.co">
+<meta property="twitter:title" content="Audio Converts:- Try to Better For You">
+<meta property="twitter:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="twitter:image" content="https://i.imgur.com/AzYduwv.png">
+
+
+
+{% endblock head %}
+
+{% block body %}
+
+
+
+  <div class="container-scroller">
+
+{% block navbar %}
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-content-wrapper sidebar-offcanvas">
+        <ul class="nav">
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="ti-home menu-icon"></i>
+              <span class="menu-title">Home</span>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contactus' %}" aria-expanded="false" aria-controls="ui-apps">
+              <i class="ti-layout menu-icon"></i>
+              <span class="menu-title">Contact Us</span>             
+            </a>            
+          </li>
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'feedback' %}" aria-expanded="false" aria-controls="sample-pages">
+              <i class="ti-file menu-icon"></i>
+              <span class="menu-title">Feedback</span>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blogs' %}">
+              <i class="ti-light-bulb menu-icon"></i>
+              <span class="menu-title">Blogs</span>
+            </a>
+          </li>
+
+          
+        </ul>
+      </div>
+    </nav>
+
+{% endblock navbar %}
+
+
+
+ <div class="container-fluid page-body-wrapper">
+
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper settings-success">
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles success"></div>
+          </div> 
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_navbar.html --> 
+      <nav class="navbar p-0 d-flex flex-row">
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="ti-align-left"></span>
+          </button>
+          <div class="navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo" href="/"><img src="" alt="Audio Converts"/></a>
+          </div>
+          <ul class="navbar-nav navbar-nav-right ml-auto">
+
+
+
+
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
+               Profile : {{ request.user.first_name }} {{ request.user.last_name }} 
+              </a>
+
+
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+
+                {% if request.user.is_authenticated %}
+               
+                <a href="{% url 'logout_view' %}" class="dropdown-item">
+                  <i class="ti-new-window text-primary"></i>
+                  Logout
+                </a>
+                {% else %}
+                
+            
+
+                <a href="{% url 'signin' %}" class="dropdown-item">
+                  <i class="ti-new-window text-primary"></i>
+                  Sign Up / Sign In
+                </a>
+
+          {% endif %}
+              
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="ti-menu"></span>
+          </button>
+        </div>
+      </nav> 
+
+
+
+
+
+      <!-- partial -->
+      <div class="main-panel">          
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="container text-center pt-5">
+                    <h4 class="mb-3 mt-5">We are try to better for you !</h4>
+                    <p class="w-75 mx-auto mb-5">Choose a plan that suits you the best. If you are not fully satisfied, we offer 30-day money-back guarantee no questions asked!!</p>
+                   
+
+                    <div class="row pricing-table">
+
+                    {% for i in obj %}
+                    
+                      <div class="col-md-6 col-xl-4 grid-margin stretch-card pricing-card">
+                        <div class="card border border-success pricing-card-body">
+                          <div class="text-center pricing-card-head">
+                            <h3 class="text-success">{{i.planname}}</h3>
+                            <p>{{i.planstatus}}</p>
+                            <h1 class="font-weight-normal mb-4">{{i.subscription}}₹ /month</h1>
+                          </div>
+                          <ul class="list-unstyled plan-features">
+
+                            {% for select in i.selectservice.all %}
+                            <li>{{ select }}</li>
+                            {% endfor %}
+                          
+                          </ul>
+                          
+                          {% if profile.paid == True %}
+                          
+                          <div class="wrapper">
+                            <a href="{{ i.urlfileds }}" class="btn btn-gradient-success btn-block">{{ i.urlname }}</a>
+                          </div> 
+                          
+                          {% else %}
+                          
+                          <div class="wrapper">
+                            <a href="{{ i.urlfileds }}" class="btn btn-gradient-success btn-block">{{ i.urlname }}</a>
+                          </div> 
+                          
+
+                          {% endif %}
+
+
+
+                        </div>
+                      </div>
+                      {% endfor %}
+
+
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+
+        
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+           </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+
+
+
+
+
+
+</div>
+
+  </div>
+  
+{% endblock body %}

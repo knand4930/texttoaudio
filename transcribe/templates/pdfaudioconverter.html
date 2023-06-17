@@ -1,0 +1,101 @@
+{% extends "transcribemaster.html" %}
+{% load static %}
+{% load gTTS %}
+
+{% block head %} 
+
+<!-- Primary Meta Tags -->
+<title>Audio Converts:- Try to Better For You</title>
+<meta name="title" content="Audio Converts:- Try to Better For You">
+<meta name="description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="audioconverts.co">
+<meta property="og:title" content="Audio Converts:- Try to Better For You">
+<meta property="og:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="og:image" content="https://i.imgur.com/AzYduwv.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="audioconverts.co">
+<meta property="twitter:title" content="Audio Converts:- Try to Better For You">
+<meta property="twitter:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="twitter:image" content="https://i.imgur.com/AzYduwv.png">
+
+
+
+{% endblock head %}
+{% block content %}
+
+      
+
+    <div class="content-wrapper">
+
+      {% if messages %}
+      <ul class="messages">
+      {% for message in messages %}
+      <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+        <form method="post" action="" enctype="multipart/form-data">
+          {% csrf_token %}
+      <div class="row">
+       
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title d-flex">Upload Your PDF 
+                <small class="ml-auto align-self-end">
+                </small>
+              </h4>
+              <input type="file" name="file" class="dropify" required />
+              
+
+
+              <input type="submit" class="btn btn-primary" value="convert Audio" />
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+
+
+    </form>
+
+
+    <div class="col-md-6 grid-margin">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">Data Available</h4>
+              <p class="card-description">
+                  Your Converted Data
+              </p>
+              <div class="card card-inverse-success" id="context-menu-access">
+                <div class="card-body">
+                  
+                  <form action="{{ obj }}" method="get">
+                    <h1>Hello worlld</h1>
+                  <audio controls class="card-text">
+                    <source src="{{ obj }}" type="audio/mpeg">
+                
+                  </audio> 
+                  <br>
+                  <hr>
+                  <a href="{{ obj }}" type="btn" class="btn btn-primary" download="{{ obj }}">Download</a>
+                </form>
+
+            </div>
+        </div>
+      </div>
+  </div>
+    </div>
+   
+
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends "back/samplemaster.html" %}
+{% block head %} 
+
+<!-- Primary Meta Tags -->
+<title>Audio Converts:- Try to Better For You</title>
+<meta name="title" content="Audio Converts:- Try to Better For You">
+<meta name="description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="audioconverts.co">
+<meta property="og:title" content="Audio Converts:- Try to Better For You">
+<meta property="og:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="og:image" content="https://i.imgur.com/AzYduwv.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="audioconverts.co">
+<meta property="twitter:title" content="Audio Converts:- Try to Better For You">
+<meta property="twitter:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="twitter:image" content="https://i.imgur.com/AzYduwv.png">
+
+
+
+{% endblock head %}
+
+{% block content %}
+
+
+<div class="card-body">
+    <h4 class="card-title">{{ obj.title }}</h4>
+
+    <div class="tab-content">
+      <div class="tab-pane fade active show" id="home-1" role="tabpanel" aria-labelledby="home-tab">
+        <div class="media">
+          <img class="mr-3 w-25 rounded" style="border-inline-style: groove; width: 200px; height: 350px;" src="{{obj.img.url}}" alt="Audio Converts">
+          <div class="media-body">
+            <h4 class="mt-0">{{ obj.short}}</h4>
+            <p>
+               {{obj.txt | safe }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+{% endblock %}
+
+
+

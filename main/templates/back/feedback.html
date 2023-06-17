@@ -1,0 +1,86 @@
+{% extends "back/samplemaster.html" %}
+
+{% block head %} 
+
+<!-- Primary Meta Tags -->
+<title>Audio Converts:- Try to Better For You</title>
+<meta name="title" content="Audio Converts:- Try to Better For You">
+<meta name="description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="audioconverts.co">
+<meta property="og:title" content="Audio Converts:- Try to Better For You">
+<meta property="og:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="og:image" content="https://i.imgur.com/AzYduwv.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="audioconverts.co">
+<meta property="twitter:title" content="Audio Converts:- Try to Better For You">
+<meta property="twitter:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="twitter:image" content="https://i.imgur.com/AzYduwv.png">
+
+
+
+{% endblock head %}
+
+
+{% block content %}
+
+
+
+
+
+
+
+
+        <div class="content-wrapper">
+
+          <div class="row grid-margin">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+                <form method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                  <h4 class="card-title">Enter Your Feedback</h4>
+                   <div class="form-group">
+                      <label>Feedback</label>
+                      <textarea class="form-control" rows="5" placeholder="Enter your full Message details" name="feed" required></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label>Upload Personal Image</label>
+                       <input type="file" name="img" class="form-control" placeholder="upload your Image">
+                        </div>
+                    
+                    <input type="submit" value="Submit Your Details" class="btn btn-primary">
+                  
+                  <div id="quillExample1" class="quill-container">
+                  </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+           </div>
+        </footer>
+        <!-- partial -->
+
+
+
+{% endblock content %} 

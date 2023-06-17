@@ -1,0 +1,192 @@
+{% extends "back/adminmaster.html" %}
+{% block head %} 
+
+<!-- Primary Meta Tags -->
+<title>Audio Converts:- Try to Better For You</title>
+<meta name="title" content="Audio Converts:- Try to Better For You">
+<meta name="description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="audioconverts.co">
+<meta property="og:title" content="Audio Converts:- Try to Better For You">
+<meta property="og:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="og:image" content="https://i.imgur.com/AzYduwv.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="audioconverts.co">
+<meta property="twitter:title" content="Audio Converts:- Try to Better For You">
+<meta property="twitter:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="twitter:image" content="https://i.imgur.com/AzYduwv.png">
+
+
+
+{% endblock head %}
+{% block body %}
+
+  
+  <div class="container-scroller">
+    <!-- partial:../../partials/_sidebar.html -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-content-wrapper sidebar-offcanvas">
+        <ul class="nav">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="{% url 'adminpanel' %}">
+              <i class="ti-home menu-icon"></i>
+              <span class="menu-title">Home</span>
+            </a>
+          </li> -->
+
+<!-- 
+            <li class="nav-item">
+            <a class="nav-link"  href="{% url 'adminpanel' %}" aria-expanded="false" aria-controls="ui-advanced">
+              <i class="ti-desktop menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li> -->
+
+
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="{% url 'pdfaudioreader' %}" aria-expanded="false" aria-controls="charts">
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">Read PDF & Text</span>
+            </a>           
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'textaudioconverter' %}" aria-expanded="false" aria-controls="charts">
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">Text To Convert Audio</span>
+            </a>           
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'pdfaudioconverter' %}" aria-expanded="false" aria-controls="charts">
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">PDF To Convert Audio</span>
+            </a>           
+          </li>
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'pdfpageaudioconverter' %}" aria-expanded="false" aria-controls="charts">
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">PDF Page To Convert Audio</span>
+            </a>           
+          </li>
+
+
+
+<!-- 
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'audiotextconverter' %}" aria-expanded="false" aria-controls="charts">
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">Audio To Convert Tex t & PDF</span>
+            </a>           
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'videotextconverter' %}" aria-expanded="false" aria-controls="charts">
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">Video To Convert Text & PDF</span>
+            </a>           
+          </li>
+  -->
+
+        </ul>
+
+        
+      </div>
+    </nav>
+
+
+
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper settings-success">
+        <div id="theme-settings" class="settings-panel">
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles success"></div>
+          </div> 
+        </div>
+      </div>
+      <!-- partial -->
+
+
+
+
+
+
+      <!-- partial:../../partials/_navbar.html -->
+      <nav class="navbar p-0 d-flex flex-row">
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="ti-align-left"></span>
+          </button>
+
+
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="ti-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+
+
+
+
+
+      <div class="main-panel">          
+        <div class="content-wrapper">
+
+
+{% block content %}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            </div>
+        </footer>
+        <!-- partial -->
+      </div>
+
+
+
+
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+
+  {% endblock body %}

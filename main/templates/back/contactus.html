@@ -1,0 +1,127 @@
+{% extends 'back/samplemaster.html' %}   
+
+{% block head %} 
+
+<!-- Primary Meta Tags -->
+<title>Audio Converts:- Try to Better For You</title>
+<meta name="title" content="Audio Converts:- Try to Better For You">
+<meta name="description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="audioconverts.co">
+<meta property="og:title" content="Audio Converts:- Try to Better For You">
+<meta property="og:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="og:image" content="https://i.imgur.com/AzYduwv.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="audioconverts.co">
+<meta property="twitter:title" content="Audio Converts:- Try to Better For You">
+<meta property="twitter:description" content="What is Audio Converts? AudioConverts are converted pdf files to audio for multiple languages and audio to convert in text and also added features to converts any video to text. It Audio Converts used very easily and the minimum price rate of markets">
+<meta property="twitter:image" content="https://i.imgur.com/AzYduwv.png">
+
+
+
+{% endblock head %}
+
+{% block content %}
+
+
+
+<div class="row">
+  <div class="col-lg-7 grid-margin stretch-card">
+    <!--x-editable starts-->
+
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Contact Details</h4>
+        <p class="card-description">Details</p>
+        <div class="template-demo">
+          <form id="editable-form" class="editable-form">
+            <div class="form-group row">
+              <label class="col-6 col-lg-4 col-form-label">Website Name</label>
+              <div class="col-6 col-lg-8 d-flex align-items-center">
+                <a href="/" id="username" data-type="text" data-pk="1">Audio Converts</a>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-6 col-lg-4 col-form-label"></label>
+              <div class="col-6 col-lg-8 d-flex align-items-center">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-6 col-lg-4 col-form-label">ContactEmail</label>
+              <div class="col-6 col-lg-8 d-flex align-items-center">
+                <a href="mailto:contact@audioconverts.com">contact@audioconverts.com</a>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-6 col-lg-4 col-form-label">Reply</label>
+              <div class="col-6 col-lg-8 d-flex align-items-center">
+                <a  id="dob" data-type="combodate">24-48 hrs</a>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-6 col-lg-4 col-form-label">Website information</label>
+              <div class="col-6 col-lg-8 d-flex align-items-center">
+                <a href="mailto:info@audioconverts.com" id="comments" >info@audioconverts.com</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--x-editable ends-->
+  </div>
+  <div class="col-lg-5 grid-margin stretch-card">
+    <!--form mask starts-->
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Audio Converts</h4>
+        <p class="card-description">Fill Your Contact Details</p>
+
+{% if messages %}
+<ul class="messages">
+{% for message in messages %}
+<li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+{% endfor %}
+</ul>
+{% endif %}
+        <form class="forms-sample"  method="post" action=''>                    
+          {% csrf_token %}
+          <div class="form-group">
+            <label>Enter your Full Name</label>
+            <input type="text" class="form-control" name="fname" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label>Enter your Email address</label>
+            <input type="email" class="form-control" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label>Message Title</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter your title" required />
+          </div>
+
+           <div class="form-group">
+            <label>Message Details</label>
+            <textarea class="form-control" rows="5" placeholder="Enter your full Message details" name="msg" required></textarea>
+          </div>
+        
+        <input type="submit" value="Submit Your Details" class="btn btn-primary">
+        </form>
+
+
+
+
+      </div>
+    </div>
+    <!--form mask ends-->
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}

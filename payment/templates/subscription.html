@@ -1,0 +1,78 @@
+{% extends  'back/adminmaster.html' %}
+
+{% block body %}
+<hr>
+<br>
+
+<div class="container">
+<div class="card-form">
+<div class="row">
+
+
+    {% if payment %}
+<form action="{% url 'pyament_status' %}" method="post">
+    {% csrf_token %}
+<script
+src="https://checkout.razorpay.com/v1/checkout.js"
+data-key="rzp_test_6IO3sMS2hRalfq" 
+data-amount="{{ payment.amount }}"
+data-currency="{{ payment.currency }}"
+data-order_id="{{ payment.id }}"
+data-buttontext="Click Here To Complete Order"
+data-name="Go Helps"
+data-description="Try To Better For You"
+data-image="logo"
+data-prefill.name="{{ payment.name }}"
+data-prefill.email="{{request.user.email}}"
+data-theme.color="#F37254"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+</form>
+
+{% else %}
+
+
+<form action="" method="post">
+    {% csrf_token %}
+
+
+    <div class="form-group">
+      <label>Enter Your Name</label>
+      <input  class="form-control" type="text" name="name" placeholder="Enter your name">
+
+</div>
+
+    <div class="form-group">
+
+
+
+        <label>Subscription Plan</label>
+
+
+<select class="form-control" name="plan">
+
+    {% for i in obj %}
+    <option value="{{i.balance}}">{{i.balance}} For {{i.name}} Subscription</option>
+    {% endfor %}
+
+
+</select>
+</div>
+<button class="btn btn-primary"> Subscription </button>
+
+
+</form>
+
+{% endif %}
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
